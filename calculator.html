@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade Calculator - EduConnect Sierra Leone</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="light">
+
+<!-- Navbar -->
+<!-- Top Bar -->
+<div class="bg-green-900 text-white text-sm py-2 px-4 hidden md:block">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <div><i class="fas fa-phone mr-2"></i>+232 78 123 456 <span class="mx-3">|</span> <i class="fas fa-envelope mr-2"></i>info@educonnect.sl</div>
+    <div class="flex items-center gap-3">
+      <span><i class="fas fa-sun mr-1"></i> Light/Dark:</span>
+      <div id="themeToggle" class="toggle-switch"><div class="toggle-knob"></div></div>
+      <a href="#" class="hover:text-yellow-300 ml-2"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="hover:text-yellow-300"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="hover:text-yellow-300"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar sticky top-0 z-50 text-white">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <a href="index.html" class="flex items-center gap-2 text-xl font-bold">
+      <i class="fas fa-graduation-cap text-yellow-400 text-2xl"></i>
+      <span>EduConnect <span class="text-yellow-400">SL</span></span>
+    </a>
+    <div class="hidden md:flex items-center gap-6 font-medium">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="courses.html">Courses</a>
+      <a class="nav-link" href="resources.html">Resources</a>
+      <a class="nav-link" href="quiz.html">Quiz</a>
+      <a class="nav-link active" href="calculator.html" aria-current="page">Grade Calc</a>
+      <a class="nav-link" href="register.html">Register</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </div>
+    <button id="mobileMenuBtn" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+  </div>
+  <div id="mobileMenu" class="mobile-menu md:hidden bg-green-900 px-4">
+    <div class="flex flex-col py-3 gap-3 font-medium" onclick="toggleMobile()">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="courses.html">Courses</a>
+      <a class="nav-link" href="resources.html">Resources</a>
+      <a class="nav-link" href="quiz.html">Quiz</a>
+      <a class="nav-link active" href="calculator.html" aria-current="page">Grade Calc</a>
+      <a class="nav-link" href="register.html">Register</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+      <div class="flex items-center gap-2 pt-2 border-t border-green-700">
+        <span class="text-sm">Dark Mode:</span>
+        <div id="themeToggleMobile" class="toggle-switch"><div class="toggle-knob"></div></div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ GRADE CALCULATOR SECTION ============ -->
+<section id="page-calculator" class="page-section active">
+  <div class="max-w-3xl mx-auto px-4 py-16">
+    <div class="text-center mb-10">
+      <h1 class="text-4xl font-bold mb-3">WASSCE Grade Calculator</h1>
+      <p class="text-lg opacity-75">Enter your scores to see your grades and aggregate</p>
+    </div>
+    <div class="card shadow-lg p-6 md:p-8">
+      <p class="mb-4 text-sm opacity-75">Enter scores (0-100) for each subject. Grading: A1(75+), B2(70-74), B3(65-69), C4(60-64), C5(55-59), C6(50-54), D7(45-49), E8(40-44), F9(below 40).</p>
+      <form id="gradeForm" class="space-y-4">
+        <div id="subjectInputs"></div>
+        <div class="flex gap-3">
+          <button type="button" onclick="addSubject()" class="btn-secondary"><i class="fas fa-plus mr-1"></i> Add Subject</button>
+          <button type="submit" class="btn-primary flex-1"><i class="fas fa-calculator mr-1"></i> Calculate Grades</button>
+        </div>
+      </form>
+      <div id="gradeResult" class="mt-8 hidden">
+        <h3 class="text-2xl font-bold mb-4">Results</h3>
+        <div id="gradeTable" class="overflow-x-auto"></div>
+        <div id="gradeSummary" class="mt-6 p-4 rounded-lg" style="background: rgba(0,107,63,0.1);"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-10 pt-12 pb-6 px-4">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 mb-8">
+    <div>
+      <div class="flex items-center gap-2 text-xl font-bold mb-3">
+        <i class="fas fa-graduation-cap text-yellow-400"></i>
+        <span>EduConnect <span class="text-yellow-400">SL</span></span>
+      </div>
+      <p class="opacity-75 text-sm">Empowering Sierra Leonean students through accessible education, learning resources, and community.</p>
+      <div class="flex gap-3 mt-4">
+        <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-yellow-400 hover:text-gray-900 flex items-center justify-center transition"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-yellow-400 hover:text-gray-900 flex items-center justify-center transition"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-yellow-400 hover:text-gray-900 flex items-center justify-center transition"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-yellow-400 hover:text-gray-900 flex items-center justify-center transition"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div>
+      <h3 class="font-bold text-lg mb-3">Quick Links</h3>
+      <ul class="space-y-2 text-sm opacity-75">
+        <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+        <li><a href="about.html" class="hover:text-yellow-300">About Us</a></li>
+        <li><a href="courses.html" class="hover:text-yellow-300">Courses</a></li>
+        <li><a href="resources.html" class="hover:text-yellow-300">Resources</a></li>
+        <li><a href="register.html" class="hover:text-yellow-300">Register</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-bold text-lg mb-3">Resources</h3>
+      <ul class="space-y-2 text-sm opacity-75">
+        <li><a href="#" class="hover:text-yellow-300">PDF Notes</a></li>
+        <li><a href="#" class="hover:text-yellow-300">Past Questions</a></li>
+        <li><a href="#" class="hover:text-yellow-300">Video Tutorials</a></li>
+        <li><a href="#" class="hover:text-yellow-300">Scholarships</a></li>
+        <li><a href="#" class="hover:text-yellow-300">Study Groups</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-bold text-lg mb-3">Newsletter</h3>
+      <p class="text-sm opacity-75 mb-3">Subscribe for educational updates and scholarship alerts.</p>
+      <form id="newsletterForm" class="flex">
+        <input type="email" placeholder="Your email" class="flex-1 px-3 py-2 rounded-l-lg text-gray-900 outline-none">
+        <button type="submit" class="px-4 rounded-r-lg" style="background: var(--accent); color: #1a1a1a;"><i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+  <div class="border-t border-white/10 pt-6 text-center text-sm opacity-70 max-w-7xl mx-auto">
+    <p>© 2026 EduConnect Sierra Leone. All rights reserved. Made with <i class="fas fa-heart text-red-400"></i> for Salone students.</p>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<div class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></div>
+
+<script src="script.js"></script>
+</body>
+</html>

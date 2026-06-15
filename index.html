@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduConnect Sierra Leone - Connecting Students, Empowering Futures</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="light">
+
+<!-- Top Bar -->
+<div class="bg-green-900 text-white text-sm py-2 px-4 hidden md:block">
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <div><i class="fas fa-phone mr-2"></i>+232 78 123 456 <span class="mx-3">|</span> <i class="fas fa-envelope mr-2"></i>info@educonnect.sl</div>
+    <div class="flex items-center gap-3">
+      <span><i class="fas fa-sun mr-1"></i> Light/Dark:</span>
+      <div id="themeToggle" class="toggle-switch"><div class="toggle-knob"></div></div>
+      <a href="#" class="hover:text-yellow-300 ml-2"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="hover:text-yellow-300"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="hover:text-yellow-300"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar sticky top-0 z-50 text-white">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <a href="index.html" class="flex items-center gap-2 text-xl font-bold" aria-current="page">
+      <i class="fas fa-graduation-cap text-yellow-400 text-2xl"></i>
+      <span>EduConnect <span class="text-yellow-400">SL</span></span>
+    </a>
+    <div class="hidden md:flex items-center gap-6 font-medium">
+      <a class="nav-link active" href="index.html" aria-current="page">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="courses.html">Courses</a>
+      <a class="nav-link" href="resources.html">Resources</a>
+      <a class="nav-link" href="quiz.html">Quiz</a>
+      <a class="nav-link" href="calculator.html">Grade Calc</a>
+      <a class="nav-link" href="register.html">Register</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </div>
+    <button id="mobileMenuBtn" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+  </div>
+  <div id="mobileMenu" class="mobile-menu md:hidden bg-green-900 px-4">
+    <div class="flex flex-col py-3 gap-3 font-medium" onclick="toggleMobile()">
+      <a class="nav-link active" href="index.html" aria-current="page">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="courses.html">Courses</a>
+      <a class="nav-link" href="resources.html">Resources</a>
+      <a class="nav-link" href="quiz.html">Quiz</a>
+      <a class="nav-link" href="calculator.html">Grade Calc</a>
+      <a class="nav-link" href="register.html">Register</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+      <div class="flex items-center gap-2 pt-2 border-t border-green-700">
+        <span class="text-sm">Dark Mode:</span>
+        <div id="themeToggleMobile" class="toggle-switch"><div class="toggle-knob"></div></div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- News Ticker -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <div class="ticker-item"> WASSCE 2026 registration opens March 15!</div>
+    <div class="ticker-item"> New scholarship opportunities for female STEM students</div>
+    <div class="ticker-item"> Free past questions now available for all subjects</div>
+    <div class="ticker-item"> ICT workshops every Saturday at Freetown Hub</div>
+    <div class="ticker-item"> National Math Competition coming in May</div>
+    <div class="ticker-item"> WASSCE 2026 registration opens March 15!</div>
+    <div class="ticker-item"> New scholarship opportunities for female STEM students</div>
+    <div class="ticker-item"> Free past questions now available for all subjects</div>
+    <div class="ticker-item"> ICT workshops every Saturday at Freetown Hub</div>
+    <div class="ticker-item"> National Math Competition coming in May</div>
+  </div>
+</div>
+
+<!-- ============ HOME SECTION ============ -->
+<section id="page-home" class="page-section active">
+  <!-- Slideshow -->
+  <div class="relative h-[500px] overflow-hidden">
+    <div class="slide active absolute inset-0" style="background: linear-gradient(rgba(0,107,63,0.7), rgba(26,62,120,0.7)), url('logo.png') center/cover;">
+      <div class="h-full flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-3xl">
+          <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Welcome to EduConnect <span class="text-yellow-400">Sierra Leone</span></h1>
+          <p class="text-lg md:text-xl mb-6">Connecting students, teachers, and learning resources across Salone.</p>
+          <div class="flex flex-wrap gap-4 justify-center">
+            <a href="register.html" class="btn-primary">Join Now <i class="fas fa-arrow-right ml-1"></i></a>
+            <a href="courses.html" class="btn-accent">Explore Courses</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide absolute inset-0" style="background: linear-gradient(rgba(0,107,63,0.7), rgba(26,62,120,0.7)), url('OIP\ .png') center/cover;">
+      <div class="h-full flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-3xl">
+          <h1 class="text-4xl md:text-6xl font-bold mb-4">Free Study Materials</h1>
+          <p class="text-lg md:text-xl mb-6">Download past exam questions, PDF notes, and tutorials for all major subjects.</p>
+          <a href="resources.html" class="btn-primary">Browse Resources</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide absolute inset-0" style="background: linear-gradient(rgba(0,107,63,0.7), rgba(26,62,120,0.7)), url('download.png') center/cover;">
+      <div class="h-full flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-3xl">
+          <h1 class="text-4xl md:text-6xl font-bold mb-4">Join Study Groups</h1>
+          <p class="text-lg md:text-xl mb-6">Connect with peers, join virtual study sessions, and prepare for WASSCE together.</p>
+          <a href="register.html" class="btn-primary">Get Started</a>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-6 left-0 right-0 text-center z-10">
+      <span class="dot active" onclick="goToSlide(0)"></span>
+      <span class="dot" onclick="goToSlide(1)"></span>
+      <span class="dot" onclick="goToSlide(2)"></span>
+    </div>
+    <button onclick="changeSlide(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white w-12 h-12 rounded-full text-xl"><i class="fas fa-chevron-left"></i></button>
+    <button onclick="changeSlide(1)" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white w-12 h-12 rounded-full text-xl"><i class="fas fa-chevron-right"></i></button>
+  </div>
+
+  <!-- Stats -->
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="card p-6 shadow-md">
+        <i class="fas fa-user-graduate text-4xl" style="color: var(--primary);"></i>
+        <div class="stat-number" data-target="5200">0</div>
+        <p class="font-semibold">Students Registered</p>
+      </div>
+      <div class="card p-6 shadow-md">
+        <i class="fas fa-book text-4xl" style="color: var(--secondary);"></i>
+        <div class="stat-number" data-target="320">0</div>
+        <p class="font-semibold">Learning Resources</p>
+      </div>
+      <div class="card p-6 shadow-md">
+        <i class="fas fa-chalkboard-teacher text-4xl" style="color: var(--accent);"></i>
+        <div class="stat-number" data-target="145">0</div>
+        <p class="font-semibold">Expert Teachers</p>
+      </div>
+      <div class="card p-6 shadow-md">
+        <i class="fas fa-school text-4xl" style="color: #dc2626;"></i>
+        <div class="stat-number" data-target="85">0</div>
+        <p class="font-semibold">Partner Schools</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Featured Courses -->
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl md:text-4xl font-bold mb-2">Featured Courses</h2>
+      <p class="text-lg opacity-75">Most popular subjects among our students</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="card shadow-lg">
+        <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?w=600&q=80" class="w-full h-48 object-cover" alt="Mathematics">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-xl font-bold">Mathematics</h3>
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-semibold">Popular</span>
+          </div>
+          <p class="opacity-80 mb-4">Algebra, geometry, trigonometry, calculus — all you need for WASSCE success.</p>
+          <a href="courses.html" class="btn-primary w-full text-center">View Course</a>
+        </div>
+      </div>
+      <div class="card shadow-lg">
+        <img src="https://images.unsplash.com/photo-1550439062-609e1531270e?w=600&q=80" class="w-full h-48 object-cover" alt="ICT">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-xl font-bold">ICT</h3>
+            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">Trending</span>
+          </div>
+          <p class="opacity-80 mb-4">Learn computing basics, Microsoft Office, internet skills and introductory programming.</p>
+          <a href="courses.html" class="btn-primary w-full text-center">View Course</a>
+        </div>
+      </div>
+      <div class="card shadow-lg">
+        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&q=80" class="w-full h-48 object-cover" alt="English">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-xl font-bold">English Language</h3>
+            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs font-semibold">Essential</span>
+          </div>
+          <p class="opacity-80 mb-4">Master comprehension, essay writing, grammar and oral English for exams.</p>
+          <a href="courses.html" class="btn-primary w-full text-center">View Course</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Educational News -->
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl md:text-4xl font-bold mb-2">Latest Educational News</h2>
+      <p class="text-lg opacity-75">Stay updated on what matters in Sierra Leone education</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <article class="card shadow-md p-6">
+        <span class="text-xs font-semibold px-2 py-1 rounded bg-red-100 text-red-800">ANNOUNCEMENT</span>
+        <h3 class="text-lg font-bold mt-3 mb-2">WASSCE 2026 Timetable Released</h3>
+        <p class="text-sm opacity-75 mb-3">The West African Examinations Council has released the official timetable for the upcoming WASSCE exams starting in June.</p>
+        <a href="#" class="text-green-700 font-semibold text-sm">Read more <i class="fas fa-arrow-right"></i></a>
+      </article>
+      <article class="card shadow-md p-6">
+        <span class="text-xs font-semibold px-2 py-1 rounded bg-blue-100 text-blue-800">SCHOLARSHIP</span>
+        <h3 class="text-lg font-bold mt-3 mb-2">50 Scholarships for Sierra Leonean Students</h3>
+        <p class="text-sm opacity-75 mb-3">The government announces 50 fully-funded scholarships for students pursuing STEM at the university level.</p>
+        <a href="#" class="text-green-700 font-semibold text-sm">Read more <i class="fas fa-arrow-right"></i></a>
+      </article>
+      <article class="card shadow-md p-6">
+        <span class="text-xs font-semibold px-2 py-1 rounded bg-purple-100 text-purple-800">EVENT</span>
+        <h3 class="text-lg font-bold mt-3 mb-2">Free ICT Bootcamp in Freetown</h3>
+        <p class="text-sm opacity-75 mb-3">A two-week intensive ICT bootcamp for senior secondary students will begin next month. Register now to secure your spot.</p>
+        <a href="#" class="text-green-700 font-semibold text-sm">Read more <i class="fas fa-arrow-right"></i></a>
+      </article>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="hero-gradient text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Learning Journey?</h2>
+      <p class="text-lg mb-6 opacity-90">Join thousands of Sierra Leonean students already using EduConnect SL to ace their exams.</p>
+      <a href="register.html" class="btn-accent text-lg px-8 py-3">Register for Free Today</a>
+    </div>
+  </div>
+</section>
+
+<!-- Sections removed - now in separate files -->
+
+<!-- Footer -->
+<footer class="mt-10 pt-12 pb-6 px-4">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 mb-8">
+    <div>
+      <div class="flex items-center gap-2 text-xl font-bold mb-3">
+        <i class="fas fa-graduation-cap text-yellow-400"></i>
+        <span>EduConnect <span class="text-yellow-400">SL</span></span>
+      </div>
+      <p class="opacity-75 text-sm">Empowering Sierra Leonean students through accessible education, learning resources, and community.</p>
+      <div class="flex gap-3 mt-4">
+        <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-yellow-400 hover:text-gray-900 flex items-center justify-center transition"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-yellow-400 hover:text-gray-900 flex items-center justify-center transition"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-yellow-400 hover:text-gray-900 flex items-center justify-center transition"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-yellow-400 hover:text-gray-900 flex items-center justify-center transition"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div>
+      <h3 class="font-bold text-lg mb-3">Quick Links</h3>
+      <ul class="space-y-2 text-sm opacity-75">
+        <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+        <li><a href="about.html" class="hover:text-yellow-300">About Us</a></li>
+        <li><a href="courses.html" class="hover:text-yellow-300">Courses</a></li>
+        <li><a href="resources.html" class="hover:text-yellow-300">Resources</a></li>
+        <li><a href="register.html" class="hover:text-yellow-300">Register</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-bold text-lg mb-3">Resources</h3>
+      <ul class="space-y-2 text-sm opacity-75">
+        <li><a href="#" class="hover:text-yellow-300">PDF Notes</a></li>
+        <li><a href="#" class="hover:text-yellow-300">Past Questions</a></li>
+        <li><a href="#" class="hover:text-yellow-300">Video Tutorials</a></li>
+        <li><a href="#" class="hover:text-yellow-300">Scholarships</a></li>
+        <li><a href="#" class="hover:text-yellow-300">Study Groups</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-bold text-lg mb-3">Newsletter</h3>
+      <p class="text-sm opacity-75 mb-3">Subscribe for educational updates and scholarship alerts.</p>
+      <form id="newsletterForm" class="flex">
+        <input type="email" placeholder="Your email" class="flex-1 px-3 py-2 rounded-l-lg text-gray-900 outline-none">
+        <button type="submit" class="px-4 rounded-r-lg" style="background: var(--accent); color: #1a1a1a;"><i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+  <div class="border-t border-white/10 pt-6 text-center text-sm opacity-70 max-w-7xl mx-auto">
+    <p>© 2026 EduConnect Sierra Leone. All rights reserved. Made with <i class="fas fa-heart text-red-400"></i> for Salone students.</p>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<div class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></div>
+
+<script src="script.js"></script>
+</body>
+</html>

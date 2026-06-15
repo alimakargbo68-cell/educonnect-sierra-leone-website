@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses - EduConnect Sierra Leone</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="light">
+
+<!-- Top Bar -->
+<div class="bg-green-900 text-white text-sm py-2 px-4 hidden md:block">
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <div><i class="fas fa-phone mr-2"></i>+232 78 123 456 <span class="mx-3">|</span> <i class="fas fa-envelope mr-2"></i>info@educonnect.sl</div>
+    <div class="flex items-center gap-3">
+      <span><i class="fas fa-sun mr-1"></i> Light/Dark:</span>
+      <div id="themeToggle" class="toggle-switch"><div class="toggle-knob"></div></div>
+      <a href="#" class="hover:text-yellow-300 ml-2"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="hover:text-yellow-300"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="hover:text-yellow-300"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar sticky top-0 z-50 text-white">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <a href="index.html" class="flex items-center gap-2 text-xl font-bold">
+      <i class="fas fa-graduation-cap text-yellow-400 text-2xl"></i>
+      <span>EduConnect <span class="text-yellow-400">SL</span></span>
+    </a>
+    <div class="hidden md:flex items-center gap-6 font-medium">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link active" href="courses.html" aria-current="page">Courses</a>
+      <a class="nav-link" href="resources.html">Resources</a>
+      <a class="nav-link" href="quiz.html">Quiz</a>
+      <a class="nav-link" href="calculator.html">Grade Calc</a>
+      <a class="nav-link" href="register.html">Register</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </div>
+    <button id="mobileMenuBtn" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+  </div>
+  <div id="mobileMenu" class="mobile-menu md:hidden bg-green-900 px-4">
+    <div class="flex flex-col py-3 gap-3 font-medium" onclick="toggleMobile()">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link active" href="courses.html" aria-current="page">Courses</a>
+      <a class="nav-link" href="resources.html">Resources</a>
+      <a class="nav-link" href="quiz.html">Quiz</a>
+      <a class="nav-link" href="calculator.html">Grade Calc</a>
+      <a class="nav-link" href="register.html">Register</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+      <div class="flex items-center gap-2 pt-2 border-t border-green-700">
+        <span class="text-sm">Dark Mode:</span>
+        <div id="themeToggleMobile" class="toggle-switch"><div class="toggle-knob"></div></div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ COURSES SECTION ============ -->
+<section id="page-courses" class="page-section active">
+  <div class="max-w-7xl mx-auto px-4 py-16">
+    <div class="text-center mb-10">
+      <h1 class="text-4xl font-bold mb-3">Our Courses</h1>
+      <p class="text-lg opacity-75">Explore subjects aligned with the Sierra Leone national curriculum</p>
+    </div>
+    <div class="max-w-md mx-auto mb-8 relative">
+      <input id="courseSearch" type="text" placeholder="Search for a course..." class="w-full px-4 py-3 pl-12 rounded-lg border-2 border-gray-200 dark:border-gray-700 outline-none focus:border-green-600">
+      <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 opacity-50"></i>
+    </div>
+    <div id="coursesGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="card shadow-lg course-card" data-name="mathematics math">
+        <div class="h-40 flex items-center justify-center text-white text-6xl" style="background: linear-gradient(135deg, #059669, #047857);"><i class="fas fa-calculator"></i></div>
+        <div class="p-6">
+          <h3 class="text-2xl font-bold mb-2">Mathematics</h3>
+          <p class="opacity-80 mb-4">Core math covering algebra, geometry, trigonometry, statistics, and calculus to prepare you for WASSCE.</p>
+          <button class="btn-primary w-full">Enroll Now</button>
+        </div>
+      </div>
+      <div class="card shadow-lg course-card" data-name="english language literature">
+        <div class="h-40 flex items-center justify-center text-white text-6xl" style="background: linear-gradient(135deg, #2563eb, #1d4ed8);"><i class="fas fa-book-open"></i></div>
+        <div class="p-6">
+          <h3 class="text-2xl font-bold mb-2">English Language</h3>
+          <p class="opacity-80 mb-4">Master essay writing, comprehension, summary, grammar, and oral English with our structured lessons.</p>
+          <button class="btn-primary w-full">Enroll Now</button>
+        </div>
+      </div>
+      <div class="card shadow-lg course-card" data-name="ict ict computer computing technology information">
+        <div class="h-40 flex items-center justify-center text-white text-6xl" style="background: linear-gradient(135deg, #7c3aed, #6d28d9);"><i class="fas fa-laptop-code"></i></div>
+        <div class="p-6">
+          <h3 class="text-2xl font-bold mb-2">ICT</h3>
+          <p class="opacity-80 mb-4">Information and Communications Technology: computer basics, Office apps, internet, and intro to coding.</p>
+          <button class="btn-primary w-full">Enroll Now</button>
+        </div>
+      </div>
+    </div>
+    <p id="noResults" class="text-center text-lg opacity-60 mt-8 hidden">No courses match your search. Try another keyword.</p>
+  </div>
+</section>
+
+<footer class="mt-10 pt-12 pb-6 px-4">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 mb-8">
+    <div>
+      <div class="flex items-center gap-2 text-xl font-bold mb-3">
+        <i class="fas fa-graduation-cap text-yellow-400"></i>
+        <span>EduConnect <span class="text-yellow-400">SL</span></span>
+      </div>
+      <p class="opacity-75 text-sm">Empowering Sierra Leonean students through accessible education.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

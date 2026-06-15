@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - EduConnect Sierra Leone</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="light">
+
+<!-- Top Bar -->
+<div class="bg-green-900 text-white text-sm py-2 px-4 hidden md:block">
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <div><i class="fas fa-phone mr-2"></i>+232 78 123 456 <span class="mx-3">|</span> <i class="fas fa-envelope mr-2"></i>info@educonnect.sl</div>
+    <div class="flex items-center gap-3">
+      <span><i class="fas fa-sun mr-1"></i> Light/Dark:</span>
+      <div id="themeToggle" class="toggle-switch"><div class="toggle-knob"></div></div>
+      <a href="#" class="hover:text-yellow-300 ml-2"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="hover:text-yellow-300"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="hover:text-yellow-300"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar sticky top-0 z-50 text-white">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <a href="index.html" class="flex items-center gap-2 text-xl font-bold">
+      <i class="fas fa-graduation-cap text-yellow-400 text-2xl"></i>
+      <span>EduConnect <span class="text-yellow-400">SL</span></span>
+    </a>
+    <div class="hidden md:flex items-center gap-6 font-medium">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link active" href="about.html">About</a>
+      <a class="nav-link" href="courses.html">Courses</a>
+      <a class="nav-link" href="resources.html">Resources</a>
+      <a class="nav-link" href="quiz.html">Quiz</a>
+      <a class="nav-link" href="calculator.html">Grade Calc</a>
+      <a class="nav-link" href="register.html">Register</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </div>
+    <button id="mobileMenuBtn" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+  </div>
+  <div id="mobileMenu" class="mobile-menu md:hidden bg-green-900 px-4">
+    <div class="flex flex-col py-3 gap-3 font-medium">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="courses.html">Courses</a>
+      <a class="nav-link" href="resources.html">Resources</a>
+      <a class="nav-link" href="quiz.html">Quiz</a>
+      <a class="nav-link" href="calculator.html">Grade Calc</a>
+      <a class="nav-link" href="register.html">Register</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ ABOUT SECTION ============ -->
+<section id="page-about" class="page-section active">
+  <div class="max-w-7xl mx-auto px-4 py-16">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold mb-3">About EduConnect SL</h1>
+      <p class="text-lg opacity-75 max-w-3xl mx-auto">Bridging the educational gap in Sierra Leone through accessible digital resources.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
+      <img src="logo.png" class="rounded-xl shadow-lg w-full" alt="Students learning">
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Our Mission</h2>
+        <p class="mb-4 opacity-85">EduConnect Sierra Leone is a non-profit initiative dedicated to providing equal access to quality educational materials for students across the country — regardless of their location, school, or economic background.</p>
+        <p class="mb-4 opacity-85">We believe every student in Sierra Leone deserves the chance to excel in their WASSCE, BECE, and university entrance exams — and that starts with access to the right resources, supportive community, and quality guidance.</p>
+        <div class="grid grid-cols-2 gap-4 mt-6">
+          <div class="flex items-start gap-3"><i class="fas fa-check-circle text-2xl" style="color: var(--primary);"></i><div><strong>Free Access</strong><p class="text-sm opacity-75">No fees, no barriers</p></div></div>
+          <div class="flex items-start gap-3"><i class="fas fa-check-circle text-2xl" style="color: var(--primary);"></i><div><strong>Local Content</strong><p class="text-sm opacity-75">Aligned to the Sierra Leone curriculum</p></div></div>
+          <div class="flex items-start gap-3"><i class="fas fa-check-circle text-2xl" style="color: var(--primary);"></i><div><strong>Community</strong><p class="text-sm opacity-75">Connect with peers & teachers</p></div></div>
+          <div class="flex items-start gap-3"><i class="fas fa-check-circle text-2xl" style="color: var(--primary);"></i><div><strong>Always Available</strong><p class="text-sm opacity-75">Study anywhere, anytime</p></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="card p-6 shadow-md text-center">
+        <i class="fas fa-bullseye text-4xl mb-3" style="color: var(--primary);"></i>
+        <h3 class="text-xl font-bold mb-2">Our Vision</h3>
+        <p class="opacity-80">A Sierra Leone where every student has equal opportunity to succeed academically and pursue their dreams.</p>
+      </div>
+      <div class="card p-6 shadow-md text-center">
+        <i class="fas fa-users text-4xl mb-3" style="color: var(--secondary);"></i>
+        <h3 class="text-xl font-bold mb-2">Who We Serve</h3>
+        <p class="opacity-80">Senior secondary students, JSS pupils, teachers, and life-learners across all 16 districts of Sierra Leone.</p>
+      </div>
+      <div class="card p-6 shadow-md text-center">
+        <i class="fas fa-hand-holding-heart text-4xl mb-3" style="color: var(--accent);"></i>
+        <h3 class="text-xl font-bold mb-2">How You Can Help</h3>
+        <p class="opacity-80">Volunteer as a tutor, donate materials, or partner with us to reach more students in rural communities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-10 pt-12 pb-6 px-4">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 mb-8">
+    <div>
+      <div class="flex items-center gap-2 text-xl font-bold mb-3">
+        <i class="fas fa-graduation-cap text-yellow-400"></i>
+        <span>EduConnect <span class="text-yellow-400">SL</span></span>
+      </div>
+      <p class="opacity-75 text-sm">Empowering Sierra Leonean students through accessible education, learning resources, and community.</p>
+    </div>
+    <div>
+      <h3 class="font-bold text-lg mb-3">Quick Links</h3>
+      <ul class="space-y-2 text-sm opacity-75">
+        <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+        <li><a href="about.html" class="hover:text-yellow-300">About Us</a></li>
+        <li><a href="courses.html" class="hover:text-yellow-300">Courses</a></li>
+        <li><a href="resources.html" class="hover:text-yellow-300">Resources</a></li>
+        <li><a href="register.html" class="hover:text-yellow-300">Register</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-bold text-lg mb-3">Resources</h3>
+      <ul class="space-y-2 text-sm opacity-75">
+        <li><a href="#" class="hover:text-yellow-300">PDF Notes</a></li>
+        <li><a href="#" class="hover:text-yellow-300">Past Questions</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-bold text-lg mb-3">Newsletter</h3>
+      <form id="newsletterForm" class="flex">
+        <input type="email" placeholder="Your email" class="flex-1 px-3 py-2 rounded-l-lg text-gray-900 outline-none">
+        <button type="submit" class="px-4 rounded-r-lg" style="background: var(--accent); color: #1a1a1a;"><i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<div class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></div>
+
+<script src="script.js"></script>
+</body>
+</html>

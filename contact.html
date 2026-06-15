@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - EduConnect Sierra Leone</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="light">
+
+<!-- Top Bar -->
+<div class="bg-green-900 text-white text-sm py-2 px-4 hidden md:block">
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <div><i class="fas fa-phone mr-2"></i>+232 78 123 456 <span class="mx-3">|</span> <i class="fas fa-envelope mr-2"></i>info@educonnect.sl</div>
+    <div class="flex items-center gap-3">
+      <span><i class="fas fa-sun mr-1"></i> Light/Dark:</span>
+      <div id="themeToggle" class="toggle-switch"><div class="toggle-knob"></div></div>
+      <a href="#" class="hover:text-yellow-300 ml-2"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="hover:text-yellow-300"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="hover:text-yellow-300"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar sticky top-0 z-50 text-white">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <a href="index.html" class="flex items-center gap-2 text-xl font-bold">
+      <i class="fas fa-graduation-cap text-yellow-400 text-2xl"></i>
+      <span>EduConnect <span class="text-yellow-400">SL</span></span>
+    </a>
+    <div class="hidden md:flex items-center gap-6 font-medium">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="courses.html">Courses</a>
+      <a class="nav-link" href="resources.html">Resources</a>
+      <a class="nav-link" href="quiz.html">Quiz</a>
+      <a class="nav-link" href="calculator.html">Grade Calc</a>
+      <a class="nav-link" href="register.html">Register</a>
+      <a class="nav-link active" href="contact.html">Contact</a>
+    </div>
+    <button id="mobileMenuBtn" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+  </div>
+  <div id="mobileMenu" class="mobile-menu md:hidden bg-green-900 px-4">
+    <div class="flex flex-col py-3 gap-3 font-medium">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="courses.html">Courses</a>
+      <a class="nav-link" href="resources.html">Resources</a>
+      <a class="nav-link" href="quiz.html">Quiz</a>
+      <a class="nav-link" href="calculator.html">Grade Calc</a>
+      <a class="nav-link" href="register.html">Register</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ CONTACT SECTION ============ -->
+<section id="page-contact" class="page-section active">
+  <div class="max-w-6xl mx-auto px-4 py-16">
+    <div class="text-center mb-10">
+      <h1 class="text-4xl font-bold mb-3">Contact Us</h1>
+      <p class="text-lg opacity-75">We'd love to hear from you — questions, feedback, or partnerships</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6 mb-10">
+      <div class="card shadow-md p-6 text-center">
+        <i class="fas fa-map-marker-alt text-4xl mb-3" style="color: var(--primary);"></i>
+        <h3 class="font-bold text-lg mb-2">Our Location</h3>
+        <p class="opacity-75">25 Siaka Stevens Street<br>Freetown, Sierra Leone</p>
+      </div>
+      <div class="card shadow-md p-6 text-center">
+        <i class="fas fa-phone-alt text-4xl mb-3" style="color: var(--secondary);"></i>
+        <h3 class="font-bold text-lg mb-2">Phone</h3>
+        <p class="opacity-75">+232 78 123 456<br>+232 30 987 654</p>
+      </div>
+      <div class="card shadow-md p-6 text-center">
+        <i class="fas fa-envelope text-4xl mb-3" style="color: var(--accent);"></i>
+        <h3 class="font-bold text-lg mb-2">Email</h3>
+        <p class="opacity-75">info@educonnect.sl<br>support@educonnect.sl</p>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 card shadow-lg overflow-hidden">
+      <div class="p-8">
+        <h2 class="text-2xl font-bold mb-4">Send us a Message</h2>
+        <form id="contactForm" class="space-y-4" novalidate>
+          <div>
+            <label class="block text-sm font-semibold mb-1">Your Name *</label>
+            <input type="text" name="name" class="w-full px-4 py-2 rounded-lg border-2 border-gray-200 outline-none">
+            <div class="error">Please enter your name.</div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1">Email *</label>
+            <input type="email" name="email" class="w-full px-4 py-2 rounded-lg border-2 border-gray-200 outline-none">
+            <div class="error">Please enter a valid email.</div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1">Subject *</label>
+            <input type="text" name="subject" class="w-full px-4 py-2 rounded-lg border-2 border-gray-200 outline-none">
+            <div class="error">Please enter a subject.</div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1">Message *</label>
+            <textarea name="message" rows="5" class="w-full px-4 py-2 rounded-lg border-2 border-gray-200 outline-none" placeholder="How can we help?"></textarea>
+            <div class="error">Please enter a message (at least 10 characters).</div>
+          </div>
+          <button type="submit" class="btn-primary w-full"><i class="fas fa-paper-plane mr-2"></i>Send Message</button>
+          <div id="contactSuccess" class="hidden p-4 rounded-lg bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300">
+            <i class="fas fa-check-circle mr-2"></i>Thank you! Your message has been sent. We will get back to you soon.
+          </div>
+        </form>
+      </div>
+      <div class="relative min-h-[300px] md:min-h-full">
+        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-13.2805%2C8.4657%2C-13.2105%2C8.5057&layer=mapnik" class="w-full h-full border-0" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-10 pt-12 pb-6 px-4">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 mb-8">
+    <div>
+      <div class="flex items-center gap-2 text-xl font-bold mb-3">
+        <i class="fas fa-graduation-cap text-yellow-400"></i>
+        <span>EduConnect <span class="text-yellow-400">SL</span></span>
+      </div>
+      <p class="opacity-75 text-sm">Empowering Sierra Leonean students through accessible education, learning resources, and community.</p>
+    </div>
+    <div>
+      <h3 class="font-bold text-lg mb-3">Quick Links</h3>
+      <ul class="space-y-2 text-sm opacity-75">
+        <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+        <li><a href="about.html" class="hover:text-yellow-300">About Us</a></li>
+        <li><a href="courses.html" class="hover:text-yellow-300">Courses</a></li>
+        <li><a href="resources.html" class="hover:text-yellow-300">Resources</a></li>
+        <li><a href="register.html" class="hover:text-yellow-300">Register</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<div class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></div>
+
+<script src="script.js"></script>
+</body>
+</html>
